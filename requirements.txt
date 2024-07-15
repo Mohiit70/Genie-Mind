@@ -1,3 +1,5 @@
 tweepy
-requests
-mysql-connector-python
+transformers
+torch
+Flask
+python-dotenv
