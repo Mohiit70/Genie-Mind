@@ -23,11 +23,15 @@ def fetch_tweets(username, count=10):
     return api.user_timeline(screen_name=username, count=count, tweet_mode='extended')
 
 def simplify_text(text):
-    return summarizer(text, max_length=50, min_length=25, do_sample=False)[0]['summary_text']
+    input_length = len(text.split())
+    max_length = min(50, input_length)  # Adjust max_length based on input length
+    return summarizer(text, max_length=max_length, min_length=max_length//2, do_sample=False)[0]['summary_text']
+
 
 def analyze_sentiment(text):
-    result = sentiment_analyzer(text)[0]
-    return result['label']
+    response = sentiment_analyzer(text)[0]
+    return response['label']
+
 
 def respond_to_tweets(username):
     tweets = fetch_tweets(username)
