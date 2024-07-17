@@ -1,16 +1,49 @@
-# ReplyGenie
+# Genie Mind Bot
 
-![ReplyGenie](img/ReplyGenie.png)
+<div style="text-align:center;">
+  <img src="img/Genie%20Mind.png" alt="Genie Mind Bot Icon" width="250" height="250">
+</div>
 
-ReplyGenie is an AI-powered Twitter sentiment analysis and interaction bot built using Python and MindsDB. It leverages machine learning models to analyze the sentiment of tweets in real-time and generates appropriate responses based on the sentiment detected.
+Genie Mind Bot simplifies tweets and provides sentiment analysis using MindsDB and Hugging Face Transformers.
 
 ## Features
 
-- **Sentiment Analysis**: Automatically analyzes the sentiment (positive, negative, neutral) of tweets.
-- **Interactive Responses**: Generates personalized responses to tweets based on the sentiment analysis.
-- **Real-time Monitoring**: Continuously monitors Twitter for new tweets and responds dynamically.
-- **User-friendly Interface**: Simple setup and configuration using Python and MindsDB.
-- **Scalable**: Can be extended to handle multiple Twitter accounts and custom responses.
+- Simplifies tweets to make them easier to understand
+- Analyzes the sentiment of tweets
 
-## Installation
+## Setup
 
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your_username/GenieMindBot.git
+   cd GenieMindBot
+
+2. **Create and activate a virtual environment:**
+
+    ```bash
+
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+
+3. **Install dependencies:**
+
+    ```bash
+    pip install -r requirements.txt
+
+4. **Set up environment variables:**
+
+    Create a .env file in the project directory and add your environment variables:
+
+    ```bash
+
+    TWITTER_CONSUMER_KEY=your_new_bot_api_key
+    TWITTER_CONSUMER_SECRET=your_new_bot_api_secret
+    TWITTER_ACCESS_TOKEN=your_new_bot_access_token
+    TWITTER_ACCESS_TOKEN_SECRET=your_new_bot_access_token_secret
+    MINDSDB_URL=http://localhost:47334
+
+5. **Run the Flask server:**
+
+    ```bash
+    python run.py

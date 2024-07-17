@@ -7,10 +7,10 @@ def simplify():
     data = request.json
     if 'text' not in data:
         return jsonify({'error': 'No text provided'}), 400
-
+    
     simplified = simplify_text(data['text'])
     sentiment = analyze_sentiment(data['text'])
-
+    
     return jsonify({
         'simplified': simplified,
         'sentiment': sentiment
